@@ -7,6 +7,19 @@ function makeHexArray(hexObject) {
   return hexArray
 }
 
+function ColorPalette(props) {
+  const name = "boxy";
+  const colors = props.colors
+  const colorBoxes = colors.map((color) => 
+  	<div className={name} style={{backgroundColor: color}}>{color}</div>
+  )
+  return (
+    <div>
+      {colorBoxes}
+    </div>
+  )
+}
+
 export default class Colors extends Component {
   constructor(props) {
     super(props);
@@ -37,11 +50,20 @@ export default class Colors extends Component {
   }
 
   render() {
+    const hasColors = this.state.colors
+    let colors
+    if (hasColors) {
+      colors = <ColorPalette colors={this.state.colors}/>
+    } else {
+      colors = null
+    }
+
     return(
       <div>
         <input type="file" onChange={this.fileSelectedHandler} />
         <button onClick={this.fileUploadHandler}>Upload</button>
         <img src={this.state.uploadedImage} alt="none"></img>
+        {colors}
       </div>
     )
   }
