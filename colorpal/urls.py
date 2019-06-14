@@ -27,7 +27,8 @@ router.register(r'images', views.ImageViewSet)
 router.register(r'colors', views.ColorPaletteViewSet)
 
 urlpatterns = [
-    path('', include(router.urls)),
+    path('', include('colors.urls')),
+    path('api/', include(router.urls)),
     path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

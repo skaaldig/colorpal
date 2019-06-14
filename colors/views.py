@@ -8,7 +8,7 @@ from .serializers import ColorPaletteSerializer, ImageSerializer
 
 
 def color_input(request):
-    return render(request, 'colors\color_form.html')
+    return render(request, 'build/index.html')
 
 
 class ColorPaletteViewSet(viewsets.ModelViewSet):
@@ -25,6 +25,7 @@ class ImageViewSet(viewsets.ModelViewSet):
     """
     queryset = Image.objects.all()
     serializer_class = ImageSerializer
+    lookup_field = 'uuid'
 
 
 
