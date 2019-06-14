@@ -29,7 +29,7 @@ def sort_colors(colors):
     for count, rgb in colors:
         for pos, rank in order:
             if count == rank:
-                sorted_list[pos] = stringify_rgb(rgb)
+                sorted_list[pos] = stringify_hex(rgb)
 
     return sorted_list
 
