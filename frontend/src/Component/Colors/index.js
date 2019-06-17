@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import UserInput from './UserInput';
 import ColorPalette from './ColorPalette';
+import Instructions from './Instructions';
+import Image from './Image';
 
 import axios from "axios";
 
@@ -48,10 +50,17 @@ export default class Colors extends Component {
       colors = null
     }
 
+    const imageUploaded = this.state.uploadedImage
+    let image
+    if (imageUploaded) {
+      image = <Image image={this.state.uploadedImage} />
+    } else {
+      image = <Instructions />
+    }
+
     return(
       <div>
-        
-        <img src={this.state.uploadedImage} alt="none"></img>
+        {image}
         <UserInput onChange={this.fileSelectedHandler} onClick={this.fileUploadHandler} />
         {colors}
       </div>
