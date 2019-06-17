@@ -11,3 +11,107 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.user_image__container {
+  max-width: 100%;
+  max-height: 500px;
+  display: flex;
+  justify-content: center;
+}
+
+.user_image {
+  object-fit: contain;
+  width: 50%;
+}
+
+.bttn {
+  background-color: white;
+  border: 1px solid black;
+  cursor: pointer;
+  display: inline-block;
+	font-family: 'Barlow', sans-serif;
+  padding: 0.5rem 1.75rem;
+  font-size: 1rem;
+}
+
+.upload_bar__container {
+  background-color: white;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.upload_bar__item {
+  flex-basis: 49%;
+  text-align: center;
+}
+
+.color_box__container {
+  background-color: #222323;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.color_box {
+  background-color: green;
+  flex-basis: 19%;
+  height: 175px;
+  margin: 0.25rem;
+  position: relative;
+}
+
+.color_box__labels {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 1rem;
+  color: white;
+  font-family: 'Barlow', sans-serif;
+}
+
+[type="file"] {
+  height: 0;
+  overflow: hidden;
+  width: 0;
+}
+
+[type="file"] + label {
+  background-color: white;
+  border: 1px solid black;
+  cursor: pointer;
+  display: inline-block;
+	font-family: 'Barlow', sans-serif;
+  padding: 0.5rem 1.75rem;
+  font-size: 1rem;
+  }
+  
+  @media (max-width: 800px) {
+  .color_box {
+    flex-basis: 32%;
+    margin: 0.15rem;
+  }
+  .user_image__container {
+    max-height: 350px;
+  }
+  
+  .upload_bar__item {
+    padding: 0.50rem 0;
+  }
+  
+}
+
+@media (max-width: 500px) {
+  .color_box__container {
+    justify-content: flex-start;
+  }
+  .color_box {
+    flex-basis: 100%;
+  }
+  
+  .user_image__container {
+    max-height: 250px;
+  }
+  
+}
