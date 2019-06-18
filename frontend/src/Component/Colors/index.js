@@ -18,7 +18,7 @@ export default class Colors extends Component {
     this.state = {
       selectedFile: null,
       uploadedImage: null,
-      colors: null,
+      colors: Array(10).fill(1).map(x => "#000000"),
     }
 
     this.fileSelectedHandler = this.fileSelectedHandler.bind(this);
