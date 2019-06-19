@@ -1,5 +1,6 @@
 import React from 'react';
 import lightOrDark from'./Helper';
+import { Spring } from 'react-spring/renderprops';
 
 
 function blackOrWhite(color) {
@@ -15,13 +16,26 @@ function blackOrWhite(color) {
 
 function ColorPalette(props) {
     const name = "color_box";
-    const colors = props.colors
+    const colors = props.colors;
+    let delay = 0;
+
     const colorBoxes = colors.map((color) => {
         let fontColor = blackOrWhite(color)
+        delay += 50
         return (
-          <div className={name} style={{backgroundColor: color}}>
-            <div className="color_box__labels" style={{color: fontColor}}>{color}</div>
-          </div>
+          <Spring
+          from={{opacity: 0}}
+          to={{opacity: 1, backgroundColor: color}}
+          delay={delay.toString()}
+          >
+
+          {props => (
+            <div className={name} style={props}>
+              <div className="color_box__labels" style={{color: fontColor}}>{color}</div>
+            </div>
+          )
+          }
+          </Spring>
         )
       }
     )
