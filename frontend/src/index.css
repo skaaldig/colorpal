@@ -69,7 +69,6 @@ code {
 }
 
 .color_box {
-  background-color: green;
   flex-basis: 19%;
   height: 175px;
   margin: 0.25rem;
@@ -129,5 +128,3 @@ code {
   }
   
 }
-
-
