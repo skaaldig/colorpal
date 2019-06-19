@@ -1,22 +1,21 @@
 import React from 'react';
+import { useSpring, animated } from 'react-spring';
 
 function Instructions(props) {
+    const slideIn = useSpring({from: {marginLeft: -500}, to: {marginLeft: 0}})
     return (
     <div className="instructions">
-        <div className="instructions__wrapper">
+        <animated.div className="instructions__wrapper" style={slideIn}>
             <h1>
                 10 Most Dominant Colors
             </h1>
             <p>
-                Upload a photo to discover the most dominant colors in the image and their hexidecimal codes. 
+                Upload a photo to discover the most dominant colors in the image and their hexidecimal codes.
             </p>
             <p>
-                <ul className="instructions__ul">
-                    <li className="instructions__li">Only PNG and JPEG file types are supported</li>
-                    <li className="instructions__li">File size is limited to 3MB</li>
-                </ul>
+                File size is limited to 3MB
             </p>
-        </div>
+        </animated.div>
     </div>
     )
 }

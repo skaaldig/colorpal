@@ -4,7 +4,7 @@ function UserInput(props) {
     return (
       <div className="upload_bar__container">
         <div className="upload_bar__item">
-          <input type="file" id="file" onChange={props.onChange} />
+          <input type="file" id="file" accept="image/png, image/jpeg" onChange={props.onChange} />
           <label for="file">Choose a File</label>
         </div>
         <div className="upload_bar__item">
