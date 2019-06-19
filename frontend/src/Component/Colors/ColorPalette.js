@@ -17,7 +17,7 @@ function blackOrWhite(color) {
 function ColorPalette(props) {
     const name = "color_box";
     const colors = props.colors;
-    let delay = 0;
+    let delay = 50;
 
     const colorBoxes = colors.map((color) => {
         let fontColor = blackOrWhite(color)

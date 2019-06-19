@@ -26,9 +26,7 @@ export default class Colors extends Component {
   }
 
   fileSelectedHandler(event) {
-    this.setState({
-      selectedFile: event.target.files[0]
-    })
+    this.setState({selectedFile: event.target.files[0]})
   }
 
   fileUploadHandler() {
@@ -67,16 +65,3 @@ export default class Colors extends Component {
     )
   }
 }
-
-
-
-
-
-// return(
-//   <div>
-//     <input type="file" onChange={this.fileSelectedHandler} />
-//     <button onClick={this.fileUploadHandler}>Upload</button>
-//     <img src={this.state.uploadedImage} alt="none"></img>
-//     {colors}
-//   </div>
-// )

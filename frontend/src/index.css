@@ -31,6 +31,7 @@ code {
   height: 500px;
   display: flex;
   justify-content: center;
+  padding-top: 2rem;
 }
 
 .user_image {
@@ -53,7 +54,7 @@ code {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  padding: 1rem;
+  padding: 2rem 0;
 }
 
 .upload_bar__item {
