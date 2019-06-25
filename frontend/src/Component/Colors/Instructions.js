@@ -6,11 +6,11 @@ function Instructions(props) {
     return (
     <div className="instructions">
         <animated.div className="instructions__wrapper" style={slideIn}>
-            <h1>
-                10 Most Dominant Colors
+            <h1 className="instructions__h1">
+                10 Most Prevalent Colors
             </h1>
-            <p>
-                Upload a photo to discover the most dominant colors in the image and their hexidecimal codes.
+            <p className="lead">
+                Upload a photo to discover the 10 most prevalent colors in the image and their hexidecimal codes.
             </p>
         </animated.div>
     </div>
