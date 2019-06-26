@@ -11,7 +11,7 @@ code {
 }
 
 .lead {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 .app__container {
@@ -35,7 +35,7 @@ code {
 
 .instructions__h1 {
   color: #ef2350;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .user_image__container {
@@ -147,6 +147,14 @@ code {
   
   .instructions__wrapper {
     padding: 2rem;
+  }
+
+  .lead {
+    font-size: 1rem
+  }
+
+  .instructions__h1 {
+    font-size: 1.5rem;
   }
   
 }

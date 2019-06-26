@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSpring, animated } from 'react-spring';
 
+
 function Instructions(props) {
     const slideIn = useSpring({from: {marginLeft: -700}, to: {marginLeft: 0}})
     return (
